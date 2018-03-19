@@ -1,9 +1,11 @@
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyAgEuXgOYwmHK_RqpVzMIJDRLD5ZB7UbbQ",
-  authDomain: "rps-multi-7fedd.firebaseapp.com",
-  databaseURL: "https://rps-multi-7fedd.firebaseio.com",
-  storageBucket: "rps-multi-7fedd.appspot.com"
+  apiKey: "AIzaSyBx2UugzK3rA_ri2wXSUutknVEIlvVyLpQ",
+    authDomain: "rock-paper-scissors-game-4a051.firebaseapp.com",
+    databaseURL: "https://rock-paper-scissors-game-4a051.firebaseio.com",
+    projectId: "rock-paper-scissors-game-4a051",
+    storageBucket: "rock-paper-scissors-game-4a051.appspot.com",
+    messagingSenderId: "458153835178"
 };
 firebase.initializeApp(config);
 var database = firebase.database();
@@ -18,6 +20,7 @@ var playerOneExists = false;
 var playerTwoExists = false;
 var playerOneData = null;
 var playerTwoData = null;
+
 // USERNAME LISTENERS
 // Start button - takes username and tries to get user in game
 $("#start").click(function() {
@@ -33,11 +36,14 @@ $("#username").keypress(function(e) {
     getInGame();
   }
 });
-// Function to capitalize usernames
+// Capitalize usernames
 function capitalize(name) {
   return name.charAt(0).toUpperCase() + name.slice(1);
 }
+
+
 // CHAT LISTENERS
+
 // Chat send button listener, grabs input and pushes to firebase. (Firebase's push automatically creates a unique key)
 $("#chat-send").click(function() {
   if ($("#chat-input").val() !== "") {
@@ -51,6 +57,7 @@ $("#chat-send").click(function() {
     $("#chat-input").val("");
   }
 });
+
 // Chatbox input listener
 $("#chat-input").keypress(function(e) {
   if (e.which === 13 && $("#chat-input").val() !== "") {
@@ -64,6 +71,7 @@ $("#chat-input").keypress(function(e) {
     $("#chat-input").val("");
   }
 });
+
 // Click event for dynamically added <li> elements
 $(document).on("click", "li", function() {
   console.log("click");
@@ -83,6 +91,7 @@ $(document).on("click", "li", function() {
     return turn + 1;
   });
 });
+
 // Update chat on screen when new message detected - ordered by 'time' value
 chatData.orderByChild("time").on("child_added", function(snapshot) {
   // If idNum is 0, then its a disconnect message and displays accordingly
@@ -98,6 +107,7 @@ chatData.orderByChild("time").on("child_added", function(snapshot) {
   // Keeps div scrolled to bottom on each update.
   $("#chat-messages").scrollTop($("#chat-messages")[0].scrollHeight);
 });
+
 // Tracks changes in key which contains player objects
 playersRef.on("value", function(snapshot) {
   // length of the 'players' array
@@ -133,6 +143,7 @@ playersRef.on("value", function(snapshot) {
     $("#player2-losses").empty();
   }
 });
+
 // Detects changes in current turn key
 currentTurnRef.on("value", function(snapshot) {
   // Gets current turn from snapshot
@@ -199,6 +210,7 @@ currentTurnRef.on("value", function(snapshot) {
     }
   }
 });
+
 // When a player joins, checks to see if there are two players now. If yes, then it will start the game.
 playersRef.on("child_added", function(snapshot) {
   if (currentPlayers === 1) {
@@ -206,6 +218,7 @@ playersRef.on("child_added", function(snapshot) {
     currentTurnRef.set(1);
   }
 });
+
 // Function to get in the game
 function getInGame() {
   // For adding disconnects to the chat with a unique id (the date/time the user entered the game)
@@ -249,7 +262,11 @@ function getInGame() {
     alert("Sorry, Game Full! Try Again Later!");
   }
 }
-// Game logic - Tried to space this out and make it more readable. Displays who won, lost, or tie game in result div.
+
+
+
+
+// Game logic. Displays who won, lost, or tie game in result div.
 // Increments wins or losses accordingly.
 function gameLogic(player1choice, player2choice) {
   var playerOneWon = function() {

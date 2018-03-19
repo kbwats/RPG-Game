@@ -1,10 +1,15 @@
 body {
   /* Visual */
-  background-color: #e4f0d0;
+  background-color: #bc8593;
 }
 header {
   /* Visual */
-  background-color: #c2d8b9;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  Width: 50%;
+  font-family: 'Roboto Condensed', sans-serif;
+
 }
 h1 {
   /* Visual */
@@ -12,14 +17,17 @@ h1 {
   /* Typography */
   font-size: 36px;
   text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 h2 {
   /* Typography */
   font-size: 24px;
+  font-family: 'Roboto', sans-serif;
 }
 input {
   /* Visual */
-  background-color: #fffcf7;
+  background-color: #bdcbd5;
+  font-family: 'Roboto', sans-serif;
 }
 #sizer {
   /* Box-model */
@@ -27,9 +35,9 @@ input {
   /* Positioning */
   margin: 0 auto;
 }
-/***********************************
-              SwapZone
-***********************************/
+/*
+SwapZone
+*/
 #swap-zone {
   /* Box-model */
   width: 75%;
@@ -54,9 +62,9 @@ input {
   /* Positioning */
   vertical-align: top;
 }
-/***********************************
-              Turn Indicator
-***********************************/
+/*
+Turn Indicator
+*/
 #current-turn {
   /* Box-model */
   width: 75%;
@@ -65,12 +73,13 @@ input {
   /* Typography */
   text-align: center;
 }
-/***********************************
-              GameDiv
-***********************************/
+/*
+GameDiv
+*/
 #game-div {
   /* Typography */
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 #player1,
 #result,
@@ -96,6 +105,7 @@ input {
   margin-bottom: 15px;
   /* Typography */
   font-size: 28px;
+  font-family: 'Roboto', sans-serif;
 }
 #player1-chosen,
 #player2-chosen {
@@ -128,9 +138,9 @@ li {
   /* Typography */
   font-size: 60px;
 }
-/***********************************
-            Chatbox
-***********************************/
+/*
+Chatbox
+*/
 #chat {
   /* Positioning */
   position: relative;
@@ -146,7 +156,8 @@ li {
   height: 125px;
   overflow: auto;
   /* Visual */
-  background-color: #fffcf7;
+  background-color: #bdcbd5;
+  font-family: 'Roboto', sans-serif;
 }
 #chat-bar {
   /* Positioning */
@@ -156,10 +167,12 @@ li {
 #chat-input {
   /* Box-model */
   width: 550px;
+  font-family: 'Roboto', sans-serif;
 }
 #chat-send {
   /* Box-model */
   width: 40px;
+  background-color: #1c8aaf;
 }
 .player1 {
   /* Visual */

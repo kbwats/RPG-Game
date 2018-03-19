@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
   <head>
     <meta charset="UTF-8">
     <title>Multiplayer Rocks Paper Scissors</title>
+
     <!-- CSS reset sheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-    <!-- Our Own CSS File -->
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
     <!-- Firebase Link -->
-    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-messaging.js"></script>
+    
+    <!--Google Fonts --> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   </head>
+
   <body>
     <header>
-      <h1>Rock Paper Scissors</h1>
+      <img src="assets/rps-logo.png">
     </header>
+
     <div id="sizer">
       <div id="swap-zone"><input id="username" placeholder="Name"/>
         <button id="start">Start</button>
@@ -42,6 +58,8 @@
           </div>
         </div>
       </div>
+
+
       <div id="chat">
         <div id="chat-messages"></div>
         <div id="chat-bar">
@@ -50,6 +68,8 @@
         </div>
       </div>
     </div>
+
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Script -->
