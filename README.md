@@ -1,4 +1,4 @@
-#Rock Paper Scissors Multiplayer Game
+# Rock Paper Scissors Multiplayer Game
 
 <img src="https://github.com/kbwats/RPG-Game/blob/master/assets/rps-logo.png">
 
