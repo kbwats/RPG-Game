@@ -8,7 +8,7 @@ The game will track each player's wins and losses.
 
 ## Technologies Used
 
-<img src="https://github.com/kbwats/ReadMe/blob/master/html.png"> <img src="https://github.com/kbwats/ReadMe/blob/master/css.png"> <img src="https://github.com/kbwats/ReadMe/blob/master/javascript.png"> <img src="https://github.com/kbwats/ReadMe/blob/master/jquery.png"><img src="https://github.com/kbwats/ReadMe/blob/master/firebase2.png">
+<img src="https://github.com/kbwats/ReadMe/blob/master/html.png"> <img src="https://github.com/kbwats/ReadMe/blob/master/css.png"> <img src="https://github.com/kbwats/ReadMe/blob/master/firebase2.png"> <img src="https://github.com/kbwats/ReadMe/blob/master/javascript.png"> <img src="https://github.com/kbwats/ReadMe/blob/master/jquery.png">
 
 ## Installation
 
